@@ -6,7 +6,17 @@ icon: books
 
 知识库就像给 AI 配一本**专属参考书**：你把自己的文档、笔记、网址塞进去，之后聊天时让 AI 翻这本书来回答你的问题。
 
-<figure><img src="../../.gitbook/assets/cherry-knowledge-empty.png" alt=""><figcaption><p>知识库入口：左上 <code>+ 添加</code> 创建第一个知识库</p></figcaption></figure>
+{% tabs %}
+{% tab title="未创建时" %}
+
+<figure><img src="../../.gitbook/assets/cherry-knowledge-base-v2.png" alt="Cherry Studio 知识库空页面"><figcaption><p>未创建知识库时，点击“创建知识库”开始</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="创建后" %}
+
+<figure><img src="../../.gitbook/assets/cherry-knowledge-base-populated-v2.png" alt="Cherry Studio 知识库列表"><figcaption><p>创建知识库并添加数据源后的列表页面</p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
 
 ## 用知识库能干什么？
 
@@ -29,7 +39,8 @@ icon: books
 
 ## 怎么用？
 
-* 第一次用：看 [完整知识库教程](../../knowledge-base/knowledge-base.md)
+* 第一次用：点击 **创建知识库**，先填写名称；进入知识库后再配置嵌入模型、分块与检索参数
+* 完整步骤：看 [知识库教程](../../knowledge-base/knowledge-base.md)
 * 想加图片 / 扫描 PDF：先看 [文档预处理](../../knowledge-base/document-preprocessing.md)，让 AI 能"读懂"图片里的文字
 * 想了解嵌入模型怎么选：看 [嵌入模型参考](../../knowledge-base/emb-models-info.md)
 * 想了解数据存哪：看 [知识库数据](../../knowledge-base/data.md)
@@ -37,8 +48,8 @@ icon: books
 ## 与其他能力的组合
 
 * **知识库 + 助手**：给某个助手"挂载"知识库，它就专精这个领域
-* **知识库 + [Cherry Agent](../../advanced-basic/agent.md)**：让 Agent 在任务过程中自己查知识库
-* **知识库 + [频道](../../advanced-basic/agent-channels.md)**：把"会查公司文档"的 Agent 派到飞书群里值班
+* **知识库 +** [**Agent**](../../advanced-basic/agent.md)：让 Agent 通过内置知识库工具检索或管理资料
+* **知识库 +** [**频道**](../../advanced-basic/agent-channels.md)：把"会查公司文档"的 Agent 派到飞书群里值班
 
 > 推荐先阅读 [概念入门](../../advanced-basic/concepts-101.md) 了解知识库与 Agent / MCP 等功能的关系。
 
@@ -47,3 +58,25 @@ icon: books
 ### 💡 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+
+```
+GET https://docs.cherryai.com.cnknowledge-base.md?ask=<question>&goal=<endgoal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

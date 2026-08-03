@@ -4,13 +4,13 @@ icon: note-sticky
 
 # 笔记
 
-笔记是 Cherry Studio 内置的 Markdown 编辑器，方便您在与 AI 对话之外整理灵感、保存阶段性产出，并与对话/智能体能力联动。
+笔记是 Cherry Studio 内置的 Markdown 编辑器，方便您在与 AI 对话之外整理灵感、保存阶段性产出，并与对话/Agent 能力联动。
 
 ### 打开笔记
 
-顶部 Tab 栏点击 `笔记`，或在启动台中点击 `笔记` 应用图标。
+打开顶部 `+` 进入 **启动台**，点击 `笔记`。打开后笔记会作为顶部应用标签保留。
 
-<figure><img src="../../.gitbook/assets/cherry-notes-empty.png" alt=""><figcaption><p>初次打开笔记，左侧为目录树，右侧为编辑器</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cherry-notes-v2.png" alt="Cherry Studio 笔记编辑器"><figcaption><p>笔记编辑器：左侧管理笔记，右侧编写 Markdown 内容</p></figcaption></figure>
 
 ### 创建第一篇笔记
 
@@ -55,7 +55,7 @@ icon: note-sticky
 * **重命名** / **从外部打开**（在 Finder / 资源管理器中显示）
 * **收藏笔记** / **取消收藏**
 * **导出笔记到知识库**：发送到指定 [知识库](../../knowledge-base/knowledge-base.md)
-* **导出 ›** 二级菜单：Markdown / Word（.docx）/ Notion / 语雀 / Obsidian / Joplin / 思源，以及"复制为图片 / 导出为图片"——可在 `设置 → 显示设置` 中开关单项
+* **导出 ›** 二级菜单：Markdown / Word（.docx）/ Notion / 语雀 / Obsidian / Joplin / 思源，以及“复制为图片 / 导出为图片”——相关导出项在 `设置 → 数据设置 → 导出菜单设置` 中管理
 * **删除**
 
 > 文件夹的右键菜单更精简，只有：新建笔记 / 新建文件夹 / 重命名 / 从外部打开 / 删除。
@@ -75,7 +75,7 @@ icon: note-sticky
 
 ### 工作目录与备份
 
-笔记内容存储为本地文件。**工作目录** 在 `笔记 → 设置 → 数据设置` 中查看与修改。
+笔记内容存储为本地文件。应用数据目录在 `设置 → 数据设置 → 数据目录` 中查看；笔记页自身的更多设置用于调整编辑器显示。
 
 * 默认存放于 Cherry Studio 应用数据目录下
 * 可通过 **应用** 按钮换到自定义路径（更改不会自动迁移已有文件，需手动复制）
@@ -83,7 +83,7 @@ icon: note-sticky
 
 ### 显示设置
 
-`笔记 → 设置 → 显示设置` 中可调整：
+在笔记右上角 `⋯ → 更多设置` 中可调整：
 
 * **默认字体** 与 **字体大小**（10–30px 之间）
 * **缩减栏宽**（限制每行最大字数，让长行不至于横铺整屏）
@@ -103,3 +103,25 @@ icon: note-sticky
 ### 💡 获取帮助与提交反馈
 
 如果您在配置或使用过程中遇到任何疑问、Bug 或有功能改进建议，请参考 [反馈与建议](../../question-contact/suggestions.md) 中提供的官方渠道。
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+
+```
+GET https://docs.cherryai.com.cnnotes.md?ask=<question>&goal=<endgoal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
