@@ -33,7 +33,7 @@ Cherry Studio 是一款集多模型对话、智能体、知识库管理、AI 绘
 
 #### **2. 智能体与自动化**
 
-* **智能体（Cherry Agent）**：可自主读取文件、运行命令、完成多步任务的 AI，详见 [智能体](advanced-basic/agent.md)。
+* **工作（Agent）**：V2 将 Agent 独立为“工作”模块，可在受控工作区内读取文件、调用工具并执行多步骤任务，详见 [工作](advanced-basic/agent.md)。
 * **技能（Skill）**：为助手或智能体加装的"专业能力包"（如做小红书图文、画流程图），开箱即用，详见 [技能](pre-basic/settings/skills.md)。
 * **MCP**：通过 Model Context Protocol 接入外部工具与服务（数据库、Notion、GitHub 等），详见 [MCP 使用教程](advanced-basic/mcp/)。
 * **频道**：将智能体派驻到飞书 / 微信 / Telegram / Discord 等 IM 平台担任群机器人，详见 [频道](advanced-basic/agent-channels.md)。
@@ -58,6 +58,7 @@ Cherry Studio 是一款集多模型对话、智能体、知识库管理、AI 绘
 
 #### **5. 高度自定义界面和布局**
 
+* **启动台与应用标签**：V2 通过[启动台](cherrystudio/preview/launchpad.md)集中管理对话、工作、绘画、翻译、知识库等应用，并支持将常用应用固定到侧边栏或以顶部标签打开。
 * **自定义 CSS**：支持全局样式自定义，打造专属界面风格。
 * **自定义对话布局**：支持列表或气泡样式布局，并可自定义消息样式（如代码片段样式）。
 * **自定义头像**：支持为软件和助手设置个性化头像。
@@ -80,7 +81,7 @@ Cherry Studio 是一款集多模型对话、智能体、知识库管理、AI 绘
 
 #### **8. 数据保障**
 
-* **多种备份方案**：支持本地备份、WebDAV 备份和定时备份，确保数据安全。
+* **备份方案**：当前 V2 支持本地备份；WebDAV 与 S3 兼容存储页面虽已可见，但备份恢复能力尚未开放，详见[数据设置](pre-basic/data-settings/README.md)。
 * **数据安全**：支持全本地场景使用，结合本地大模型，避免数据泄漏风险。
 
 <figure><img src=".gitbook/assets/cherry-chat-v2-new-conversation.png" alt="Cherry Studio V2 新对话界面"><figcaption><p>对话示例：把季度营收数据整理为可视化图表，并继续分析业务趋势</p></figcaption></figure>
