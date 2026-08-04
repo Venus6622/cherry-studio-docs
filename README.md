@@ -83,6 +83,8 @@ Cherry Studio 是一款集多模型对话、智能体、知识库管理、AI 绘
 * **多种备份方案**：支持本地备份、WebDAV 备份和定时备份，确保数据安全。
 * **数据安全**：支持全本地场景使用，结合本地大模型，避免数据泄漏风险。
 
+<figure><img src=".gitbook/assets/cherry-chat-v2-new-conversation.png" alt="Cherry Studio V2 新对话界面"><figcaption><p>对话示例：把季度营收数据整理为可视化图表，并继续分析业务趋势</p></figcaption></figure>
+
 ***
 
 ### **项目优势**
